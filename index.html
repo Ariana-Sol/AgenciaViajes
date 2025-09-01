@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agencia de Viajes</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="AgenciadeViajes"> 
+    <div class="logos">
+      <img src="imagenes/logo.png" alt="Logo Agencia">
+    </div>
+
+    <div class="iconos">
+      <img src="imagenes/003-simbolo-de-la-interfaz-de-busqueda.png" alt="Lupa de búsqueda">
+      <div class="carrito-icono">
+        🛒 <span id="contador-carrito">0</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MENÚ -->
+  <div class="productos">
+    <a href="#">Paquetes</a>
+    <a href="#">Destinos</a>
+    <a href="#">Información</a>
+  </div>
+
+  <!-- BANNER SLIDER -->
+  <header class="slider-container">
+    <div class="slider" id="slider">
+      <img src="imagenes/Banner1.png" class="slide" alt="Banner 30% de descuento">
+      <img src="imagenes/Banner2.jpg" class="slide" alt="Banner Make up">
+      <img src="imagenes/Banner3.jpg" class="slide" alt="Promoción viajes">
+      <img src="imagenes/banner4.jpg" class="slide" alt="Ofertas exclusivas">
+    </div>
+
+    <button class="slider-btn prev" onclick="cambiarSlide(-1)">❮</button>
+    <button class="slider-btn next" onclick="cambiarSlide(1)">❯</button>
+  </header>
+
+  <!-- TIENDA -->
+  <main>
+    <section class="Tienda" id="contenedor-productos">
+      <section>
+        <img src="imagenes/amsterdam.jpg" alt="Amsterdam">
+        <h3>Viaje a Ámsterdam</h3>
+        <p>Vuelo + Hotel 5 noches</p>
+        <button>Comprar</button>
+      </section>
+
+      <section>
+        <img src="imagenes/coreadelsur.jpg" alt="Corea del Sur">
+        <h3>Descubrí Corea</h3>
+        <p>Cultura + Gastronomía</p>
+        <button>Comprar</button>
+      </section>
+
+      <section>
+        <img src="imagenes/eueopa.jpg" alt="Europa">
+        <h3>Europa clásica</h3>
+        <p>Madrid, Roma y París</p>
+        <button>Comprar</button>
+      </section>
+
+      <section>
+        <img src="imagenes/isla.jpg" alt="Isla Caribe">
+        <h3>Islas paradisíacas</h3>
+        <p>Todo incluido 7 noches</p>
+        <button>Comprar</button>
+      </section>
+
+      <section>
+        <img src="imagenes/paris.jpg" alt="París">
+        <h3>Romántico París</h3>
+        <p>Vuelo + Hotel céntrico</p>
+        <button>Comprar</button>
+      </section>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="testimonios">
+      <div class="testimonios-header">
+        <h2>¿Por qué elegirnos?</h2>
+        <p>Lo que dicen nuestros clientes felices.</p>
+      </div>
+
+      <div class="testimonios-contenedor">
+        <div class="testimonio">
+          <p>"Cumplieron mis sueños de viajar a Disney"</p>
+          <h4>- Camila R.</h4>
+        </div>
+
+        <div class="testimonio">
+          <p>"Tuve mi Luna de Miel soñada!"</p>
+          <h4>- Sofía M.</h4>
+        </div>
+
+        <div class="testimonio">
+          <p>"Me resolvieron un viaje de último minuto, son los mejores!"</p>
+          <h4>- Lara B.</h4>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <ul>
+      <img src="imagenes/003-logotipo-de-instagram.png" alt="Instagram">
+      <img src="imagenes/002-tik-tok.png" alt="TikTok">
+      <img src="imagenes/004-whatsapp.png" alt="WhatsApp">
+    </ul>
+
+    <h3>Dónde estamos</h3>
+    <div style="width: 100%; max-width: 600px; margin: auto;">
+      <iframe 
+        src="https://maps.app.goo.gl/sEekcn5v6EsUJLJE9" 
+        width="100%" 
+        height="200" 
+        style="border:0;" 
+        allowfullscreen 
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <div>
+      <h3>¡Contactanos!</h3>
+      <form action="https://formspree.io/f/mkgzgjrr" method="post">
+        <input type="text" name="Nombre" id="Nombre" placeholder="Escribí tu Nombre" required>
+        <input type="email" name="email" id="email" placeholder="Escribí tu email" required>
+        <textarea name="Mensaje" id="mensaje" cols="30" rows="5" placeholder="Me interesa un viaje..." required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </footer>
+
+  <!-- JS Slider -->
+  <script src="slider.js"></script>
+</body>
+</html>
